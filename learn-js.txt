@@ -1,0 +1,166 @@
+console:
+ecrire console directement
+console.log("");
+console.table("");
+console.warn("");
+console.time('test');
+	traitements;
+console.timeend('test')  //temp d'execusion les traitements
+
+		***var let const***
+// A variable can contain: letters, numbers, or underscores
+// it cannot start with a number
+// variables with more than 1 name
+var firstName = 'Juan Pablo'; // CamelCase
+var first_name = 'Juan Pablo'; //underscore
+var FirstName = 'Juan Pablo'; // pascal case
+  --let--
+we can't redeclare the varable (resign)
+	--const--
+// You cannot re-assign the value(costanta)
+// The values from an object can be re assigned.
+const car = {
+    name: 'Mustang',
+    motor: 6.5
+}
+console.log(car);
+
+car.name = 'Audi';
+console.log(car);
+// Same with arrays
+const numbers = [1,2,3,4,5];
+
+console.log(numbers);
+
+numbers[3] = 3;
+console.log(numbers);
+
+numbers.push(6);
+console.log(numbers);
+
+// But you cannot re assign the whole array
+
+numbers = [1,2,3];
+
+	--data type
+/ Javascript is a dinamically typed language
+// You don't specify the data type
+// the data type is defined by the value and not the variable
+
+// The same variable can hold different data types and change
+// while the program is executing
+
+// In languages such as C, Java or C# you have to specify the data type
+
+// In JavaScript you can add that functionality with TypeScript
+
+// TypeOf operator is used to retrieve the data type
+
+// In JavaScript a variable can change the data type
+
+let name = 'Juan'
+name = 20;
+name = true;
+name = undefined;
+name = Symbol('Hello');
+console.log(typeof name);
+
+// Let's review the other data types
+const name = "Juan";
+console.log(typeof name );
+
+// Numbers
+let number;
+
+number =  20;
+console.log(typeof number );
+number = "20";
+console.log(typeof number );
+
+// Boolean
+let learningJS = true;
+console.log(typeof learningJS );
+
+// Null
+// will return object
+let bankSavings = null;
+console.log(typeof bankSavings );
+
+// Undefined
+let person;
+console.log(typeof person );
+
+// Symbol (ES6)
+let symbolES6 = Symbol('this is a symbol');
+console.log(typeof symbolES6);
+
+// Reference (Objetos)
+// Arrays
+let languages = ['HTML5', 'JS', 'PHP'];
+console.log(typeof languages);
+
+// Objects
+let person = {
+    name: 'Juan',
+    city: 'mexico'
+}
+console.log(typeof person);
+
+// Dates
+let today = new Date();
+console.log(typeof today);
+// null type:object
+//aray type:object
+//date type:object
+//undefind: variable without value			
+const learning = 'Learning JavaScript is great!';
+let output;
+			STRING METHODS
+// length
+output = learning.length ;
+
+// concat
+output = learning.concat(" ", " and fun");
+
+// uppercase
+output = learning.toUpperCase();
+
+// lowercase
+output = learning.toLowerCase();
+
+// indexOf // indexof -1 doesn't exist
+output = learning.indexOf('JavaScript');
+output = learning.indexOf('PHP');
+
+// substring()
+output = learning.substring(0,10);
+output = learning.substring(2,10);
+
+// Substring from the end
+output = learning.substring( learning.length - 4 );
+
+// slice()
+// negative number will start from the end
+output = learning.slice(0,4);
+output = learning.slice(-3);
+
+// Split
+output = learning.split(" ");
+
+// Another wxample
+const hobbies = 'read, walk, listen music, write, learn to program';
+output = hobbies.split(", ");
+
+// Replace.
+output = learning.replace('JavaScript', 'Modern JavaScript');
+
+// includes
+output = learning.includes('JavaScript');
+output = learning.includes('PHP');
+
+// repeat
+let greet =  "hello ";
+    output = greet.repeat(3);
+
+console.log(output);
+    
