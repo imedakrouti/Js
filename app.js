@@ -5,24 +5,29 @@ price1=30,
 price2=40;
 let html;
 
-// html='<ul>'+
-// '<li class="item">Item :'+prod1+'</li>'+
-// '<li>price :'+price1+'</li>'+
-// '<li>Item :'+prod2+'</li>'+
-// '<li>price :'+price2+'</li>'+
-// '<li>total :'+(price1+price2)+'</li>'+
-// '</ul>';
+html='<ul>'+
+'<li class="item">Item :'+prod1+'</li>'+
+'<li>price :'+price1+'</li>'+
+'<li>Item :'+prod2+'</li>'+
+'<li>price :'+price2+'</li>'+
+'<li>total :'+(price1+price2)+'</li>'+
+'</ul>';
 // Template Strings
 
 html=`
-<ul>
-<li style="color:red"class="item">Item :${prod1}</li>
-<li>price :${price1}</li>
-<li>Item :${prod2}</li>
-<li>price :${price2}</li>
-<li>Total :${price1+price2}</li>
+
+<ul class="list-group w-100">
+<li class="list-group-item bg-danger">price :${price1}</li>
+<li class="list-group-item bg-dark">Item :${prod2}</li>
+<li class="list-group-item bg-info">price :${price2}</li>
+<li class="list-group-item bg-light">Total :${price1+price2}</li>
+<li class="list-group-item bg-primary">Total :${total(price1,price2)}</li>
+<li class="list-group-item bg-warning">Item :${prod1}</li>
 </ul>
 `;
+function total(param1,param2){
+    return param1+param2;
+}
 const welcome=document.querySelector('#welcome');
 welcome.innerHTML=html;
 // let imed=0;
@@ -128,6 +133,25 @@ result=Math.floor(3.2);
 result=7.88888;
 console.log(result.toFixed(3));
 result='hello'
-if (isNaN(result)){
-    console.log('not a number')
+
+try {
+    console.log(number(result))
+
+} catch (error) {
+    console.error('something error')
 }
+if (isNaN(result)){
+    console.log('not a number');
+
+}
+console.log(`aaaa${result}`)
+let aanumber=1209139.101213;
+console.log(aanumber.toFixed())
+console.info(typeof(String(true)));
+//const arr=['imed',3.7,4,5,{'car':'symbole','price':12}];
+const arr=new Array('imed',3.7,4,5,{'car':'symbole','price':12})
+console.table(arr);
+//check if an array
+console.log(Array.isArray(arr));
+console.log([1,2,3].toString())
+console.log(Number([1,2,2]));

@@ -163,4 +163,172 @@ let greet =  "hello ";
     output = greet.repeat(3);
 
 console.log(output);
+
+COMPARISON OPERATORS
+   
+
+console.log( 1 > 2);
+
+console.log( 1 < 2);
+
+// JavaScript can make comparisons between characters
+console.log('a' < 'b');
+
+console.log('a' > 'b' );
+
+console.log('Z' < 'a');
+
+// Equality Operator
+console.log(2 == '2');
+
+// Strict comparison Operator (This will check the typeof also)
+console.log(2 === '2');
+
+
+console.log( 2 == 3);
+
+// Not Equals
+console.log( 2 != 2);
+console.log('hello' != ' hello');
+
+// Comparison between null & undefined
+console.log(null == undefined);
+console.log(null === undefined);
+
+
     
+
+CONVERT STRINGS TO NUMBERS
+   
+
+let number1 = "50",
+    number2 = 10,
+    number3 = 'nine';
+
+
+console.log(number1 + number2);
+
+// Convert number1 to Number
+console.log(Number(number1) + number2);
+console.log(parseInt(number1) + number2);
+
+// Convert number 3
+console.log(number3);
+
+// This will concatenate the value
+console.log(number1 + number2);
+
+// But this will substract the value
+console.log(number1 - number2);
+
+// Another Methods
+let number = "20";
+number = Number("20");
+number = Number("20.20102");
+number = Number(true);
+number = Number(false);
+number = Number(null);
+number = Number("Hello world");
+number = Number([1,2,3,4]);
+
+console.log(number);
+console.log(typeof number);
+
+// ParseInt & ParseFloat
+
+number = parseInt("100");
+number = parseInt("100.20");
+number = parseFloat("100.20");
+
+
+// ToFixed just for numbers
+let number1 = "1209139";
+let number2 = 1209139.101213;
+console.log(number1.toFixed(4) );
+console.log(number2.toFixed(4) );
+
+   
+
+CONVERTING DATA TO STRING
+   
+
+// Numbers to string
+
+let number = 90210,
+    output;
+
+output = String(number);
+
+// Anothers
+dato = 4+4;
+dato = "4" + "4";
+
+
+console.log(output);
+console.log(output.length);
+console.log(typeof output);
+
+
+
+
+
+// bool to string
+output = true;
+output = String(true);
+
+// date to string
+output = new Date();
+output = String( new Date() );
+
+// array to string
+output = String( [1,2,3,4] );
+
+// toString()
+
+output = 20.toString() ;
+output = true.toString() ;
+output = [1,2,3,4].toString() ;
+
+// null cannot be converted since it doesn't exist
+output = null.toString() ;
+
+
+    
+	//Template leterals /template strings
+
+we use string template to concatenate strings with variable using interpolation ${}
+const product1 = 'Pizza';
+const price1 = 30;
+const product2 = 'Hamburger';
+const price2 = 40;
+
+// Old Method
+let html;
+html  = '<ul>'+
+        '<li>Item: ' + product1 + '</li>' +
+        '<li>Price: $ ' + price1 + '</li>' +
+        '<li>Item: ' + product2 + '</li>' +
+        '<li>Price: $ ' + price2 + '</li>' +
+        '<li>Total: $' + (price1 + price2) + '</li>';
+        '</ul>';
+
+// Template Strings
+
+html = `
+    <ul>
+        <li>Item: ${product1}</li>
+        <li>Price: ${price1}</li>
+        <li>Item: ${product2}</li>
+        <li>Price: ${price2}  </li>
+        <li>Total: ${total(price1, price2)}</li>
+    </ul>
+`;
+
+function total(param1, param2) {
+    return param1 + param2;
+}
+
+// HTML to inject the code
+
+let app = document.querySelector('#app');
+app.innerHTML = html ;
