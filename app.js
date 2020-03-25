@@ -155,3 +155,116 @@ console.table(arr);
 console.log(Array.isArray(arr));
 console.log([1,2,3].toString())
 console.log(Number([1,2,2]));
+//modify item
+arr[4]=77;
+const vect=Array(1,2,"AZER")
+//add item at the end of array
+arr.push('aded at the end')
+arr.push(vect);
+arr[6][1]="";
+//add item at the beginen
+arr.unshift("first item");
+//add item in any pos with using null as number item to remove
+arr.splice('4',null,["added item","second","third"],1,2);
+//arr.splice('0',6,"add")
+//delete element from the end
+arr.pop();
+//delete from the beginning
+arr.shift();
+//remove items in any position: 
+arr.splice('4',2);
+//change item and delete
+arr.splice('4',2,"IMED");//will point on the fourth position and delete 2 item and add one in the 4 position 
+console.table(arr);
+const personne={
+    firstName:'imed',
+    lastName:'akrouti',
+    job:'web dev',
+    age:28,
+    hobies:['real','madrid'],
+    living:{
+        city:'sfax',
+        pays:'tunis'
+    },
+    getAge:function getAge(){
+        return this.age;
+    },
+    burthDate:function getburth(){
+        return new Date().getFullYear()-this.age;
+    }
+}
+console.log(personne);
+console.log(personne.living.pays);
+console.log(personne.getAge());
+console.log(personne.burthDate());
+const truck=[
+    {model:'iveco',tonage:'3T'},
+    {model:'berlet',tonage:'5t'},
+    {model:'scania',tonage:'50t'}
+];
+for (let index = 0; index < truck.length; index++) {
+    console.log(`type de camion est :${truck[index].model} Tonage est:${(truck[index].tonage)}`);
+                }
+truck.push({model:'man',tonage:'40t'});
+console.log(truck);
+const car={
+    model:'isuzu',
+    engin:'3'
+}
+console.log(car)
+//function
+function hello() {
+    console.log('hello');
+}
+hello();
+//function with default parametres 
+function hi(firstName="lakrez",lastName="akrouti"){
+    console.log(`hello ${firstName} ${lastName}`);
+
+}
+hi("imed","akrouti");
+//function expression 
+const sum=function (number1=0,number2=0) {
+    return number1+number2;
+}
+console.log(sum());
+console.log(sum(7));
+console.log(sum(7,9));
+// imidiatly invoked function expressions iifes
+(function(){
+    console.log('iifes functions')
+})();
+(function(tecknologie){
+    console.log('iifes functions in'+' '+tecknologie)
+})('js');
+
+//proprety method 
+const musique={
+    play:function(id=1){
+        console.log(`morceau number ${id}`);},
+    pause:function(){
+        console.log('Pause...');}
+}
+musique.play(7);
+musique.pause();
+musique.remove=function(id=7){
+    console.log(`morceau deleted number ${id}`)
+}
+musique.remove();
+musique.nationality="afrique";
+musique.add=function (id) { 
+    console.log('musique added')
+ }
+musique.add();
+delete musique.add;
+console.log(musique);
+musique.add();
+
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+  };
+  
+  
